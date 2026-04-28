@@ -6,8 +6,9 @@ import { saveToStorage } from "../../hooks/useLocalStorage";
 const penguLogo = "/pengulogo.png";
 const penguImg = "/penguimg.png";
 
-const ADMIN_USER = "admin";
-const ADMIN_PASS = "pengu2024";
+// Credentials are now managed via Environment Variables: VITE_ADMIN_USER & VITE_ADMIN_PASS
+const ADMIN_USER = import.meta.env.VITE_ADMIN_USER || "admin";
+const ADMIN_PASS = import.meta.env.VITE_ADMIN_PASS || "pengu2024";
 
 export function AdminLogin() {
   const navigate = useNavigate();
@@ -221,12 +222,6 @@ export function AdminLogin() {
             </button>
           </form>
 
-          <div
-            className="mt-8 pt-6 text-center text-xs"
-            style={{ borderTop: "1px solid rgba(74,46,31,0.1)", color: "#8B5E3C" }}
-          >
-            <span style={{ color: "#4A2E1F" }}>Demo credentials:</span> admin / pengu2024
-          </div>
         </div>
       </div>
       
