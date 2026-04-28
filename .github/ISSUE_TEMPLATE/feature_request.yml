@@ -1,0 +1,25 @@
+name: Feature Request
+description: Suggest an idea for Pengu AI
+title: "[Feature]: "
+labels: ["enhancement"]
+body:
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      description: A clear and concise description of what the feature is.
+      placeholder: I want Pengu AI to...
+    validations:
+      required: true
+  - type: textarea
+    id: logic
+    attributes:
+      label: Proposed Logic/Implementation
+      description: How should this be implemented?
+  - type: checkboxes
+    id: checklist
+    attributes:
+      label: Impact
+      options:
+        - label: This is a breaking change
+        - label: This improves SEO/Performance
