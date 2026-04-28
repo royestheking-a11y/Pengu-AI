@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { Link } from "react-router";
 import { Check, ArrowRight, Globe, Smartphone, Bot, Zap, BarChart3, Palette, ChevronRight } from "lucide-react";
 import { api } from "../utils/api";
+import { SEO } from "./SEO";
 
 const serviceIconMap: Record<string, any> = {
   "🌐": Globe,
@@ -31,6 +32,11 @@ export function ServicesPage() {
   }, []);
   return (
     <div className="min-h-screen" style={{ background: "var(--pengu-bg)" }}>
+      <SEO 
+        title="Our Services"
+        description="Explore enterprise-grade AI digital solutions. 100% automated web development, mobile apps, and business automation by Pengu AI."
+        keywords="AI Services, Automated Development, Digital Transformation"
+      />
       {/* Hero */}
       <section
         className="pt-28 pb-16 px-4 sm:px-6 lg:px-8 text-center"

@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { Mail, Phone, MapPin, MessageCircle, Clock, Send, CheckCircle } from "lucide-react";
 import { api } from "../utils/api";
 import { toast } from "sonner";
+import { SEO } from "./SEO";
 
 const services = [
   "Website Development",
@@ -59,6 +60,11 @@ export function ContactPage() {
 
   return (
     <div className="min-h-screen" style={{ background: "var(--pengu-bg)" }}>
+      <SEO 
+        title="Contact Us"
+        description="Get a free project consultation from the world's first 100% automated AI company. Let's build your enterprise-grade digital future today."
+        keywords="Contact Pengu AI, AI Consultation, Business Automation"
+      />
       {/* Hero */}
       <section
         className="pt-28 pb-16 px-4 sm:px-6 lg:px-8 text-center"

@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { Link } from "react-router";
 import { ExternalLink, ArrowRight } from "lucide-react";
 import { api } from "../utils/api";
+import { SEO } from "./SEO";
 
 
 
@@ -36,6 +37,11 @@ export function PortfolioPage() {
 
   return (
     <div className="min-h-screen" style={{ background: "var(--pengu-bg)" }}>
+      <SEO 
+        title="Portfolio"
+        description="See our latest AI-powered projects. From automated websites to enterprise applications, discover how Pengu AI transforms businesses."
+        keywords="AI Portfolio, Automated Projects, Case Studies"
+      />
       {/* Hero */}
       <section
         className="pt-28 pb-16 px-4 sm:px-6 lg:px-8 text-center"

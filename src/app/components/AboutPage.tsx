@@ -1,6 +1,7 @@
 import { Link } from "react-router";
 import { Target, Eye, Zap, Bot, Globe, Shield, TrendingUp, Users } from "lucide-react";
 import { motion } from "framer-motion";
+import { SEO } from "./SEO";
 const penguImg = "/penguimg.png";
 const penguLogo = "/pengulogo.png";
 
@@ -33,6 +34,11 @@ const teamMembers = [
 export function AboutPage() {
   return (
     <div className="min-h-screen" style={{ background: "var(--pengu-bg)" }}>
+      <SEO 
+        title="About Us"
+        description="Learn about Pengu AI, the first 100% automated AI digital solution company. Discover our mission to drive no-human intelligence enterprise-grade transformation."
+        keywords="About Pengu AI, AI Mission, Automated Future"
+      />
       {/* Hero */}
       <section
         className="pt-28 pb-20 px-4 sm:px-6 lg:px-8"

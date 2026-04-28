@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { Link } from "react-router";
 import { Briefcase, MapPin, Clock, ArrowRight, Sparkles, Rocket, Globe } from "lucide-react";
 import { api } from "../utils/api";
+import { SEO } from "./SEO";
 
 export function CareersPage() {
   const [jobs, setJobs] = useState<any[]>([]);
@@ -23,6 +24,11 @@ export function CareersPage() {
 
   return (
     <div className="min-h-screen pt-28 pb-20" style={{ background: "#FDF8F5" }}>
+      <SEO 
+        title="Careers"
+        description="Join the future of automated intelligence. Explore career opportunities at Pengu AI and help us build the next generation of enterprise-grade AI systems."
+        keywords="AI Careers, Work at Pengu, Automated Jobs"
+      />
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Hero */}
         <div className="text-center max-w-3xl mx-auto mb-20">

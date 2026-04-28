@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { Link } from "react-router";
 import { Clock, ArrowRight, Search, FileSearch } from "lucide-react";
 import { api } from "../utils/api";
+import { SEO } from "./SEO";
 
 const categories = ["All", "Business", "AI & Automation", "Marketing", "Technology"];
 
@@ -45,6 +46,11 @@ export function BlogPage() {
 
   return (
     <div className="min-h-screen" style={{ background: "var(--pengu-bg)" }}>
+      <SEO 
+        title="Blog"
+        description="Latest insights on AI, automation, and digital business transformation. Read the Pengu AI blog for enterprise-grade growth strategies."
+        keywords="AI Blog, Automation Tips, Digital Strategy"
+      />
       {/* Hero */}
       <section
         className="pt-28 pb-16 px-4 sm:px-6 lg:px-8 text-center"

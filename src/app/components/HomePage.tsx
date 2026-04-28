@@ -9,6 +9,7 @@ const penguImg = "/penguimg.png";
 import { getFromStorage } from "../hooks/useLocalStorage";
 import { initialTestimonials, initialServices } from "../data/initialData";
 import { motion } from "framer-motion";
+import { SEO } from "./SEO";
 
 const trustLogos = [
   { name: "Stripe", logo: "https://upload.wikimedia.org/wikipedia/commons/b/ba/Stripe_Logo%2C_revised_2016.svg" },
@@ -125,6 +126,11 @@ export function HomePage() {
 
   return (
     <div className="min-h-screen" style={{ background: "var(--pengu-bg)" }}>
+      <SEO 
+        title="Home"
+        description="Welcome to Pengu AI — the world's first 100% automated AI digital solution company. We provide no-human intelligence enterprise-grade automation for global businesses."
+        keywords="Automated Business, AI Enterprise, Digital Solutions"
+      />
       {/* HERO SECTION */}
       <section className="relative min-h-screen flex items-center overflow-hidden pt-16">
         {/* Background elements */}
