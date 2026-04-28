@@ -58,4 +58,17 @@ app.use((err, req, res, next) => {
 
 app.listen(PORT, () => {
   console.log(`🚀 Server running on http://localhost:${PORT}`);
+
+  // Self-ping to keep Render backend alive (Free Tier)
+  const SELF_URL = process.env.RENDER_EXTERNAL_URL;
+  if (SELF_URL) {
+    setInterval(() => {
+      const https = require('https');
+      https.get(`${SELF_URL}/api/health`, (res) => {
+        console.log('✅ Self-ping successful: Server is awake');
+      }).on('error', (err) => {
+        console.error('❌ Self-ping failed:', err.message);
+      });
+    }, 14 * 60 * 1000); // Ping every 14 minutes
+  }
 });
