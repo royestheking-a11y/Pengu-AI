@@ -7,8 +7,8 @@ const penguLogo = "/pengulogo.png";
 const penguImg = "/penguimg.png";
 
 // Credentials are now managed via Environment Variables: VITE_ADMIN_USER & VITE_ADMIN_PASS
-const ADMIN_USER = import.meta.env.VITE_ADMIN_USER || "admin";
-const ADMIN_PASS = import.meta.env.VITE_ADMIN_PASS || "pengu2024";
+const ADMIN_USER = import.meta.env.VITE_ADMIN_USER || "admin@pengu.com";
+const ADMIN_PASS = import.meta.env.VITE_ADMIN_PASS || "pengu878";
 
 export function AdminLogin() {
   const navigate = useNavigate();
